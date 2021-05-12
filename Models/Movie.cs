@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -22,5 +23,8 @@ namespace ShowdeBola.Models
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$"), StringLength(4), Required]
         public string Rating {get; set;}
+        
+        
+        public ICollection<Actor> Actors {get; set;}
     }
 }

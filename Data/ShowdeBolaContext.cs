@@ -11,5 +11,7 @@ namespace ShowdeBola.Data
         }
 
         public DbSet<Movie> Movie {get; set;}
+
+        public DbSet<ShowdeBola.Models.Actor> Actor { get; set; }
     }
 }
