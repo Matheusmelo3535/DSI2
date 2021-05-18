@@ -24,7 +24,7 @@ namespace ShowdeBola.Models
         [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$"), StringLength(4), Required]
         public string Rating {get; set;}
         
-        
+        [Display(Name = "Atores")]
         public ICollection<Actor> Actors {get; set;}
     }
 }

@@ -118,7 +118,7 @@ namespace ShowdeBola.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["movieId"] = new SelectList(_context.Movie, "Id", "Genre", actor.movieId);
+            ViewData["movieId"] = new SelectList(_context.Movie, "Id", "Title", actor.movieId);
             return View(actor);
         }
 

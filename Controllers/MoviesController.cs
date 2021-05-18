@@ -57,7 +57,7 @@ namespace ShowdeBola.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie
+            var movie = await _context.Movie.Include(m => m.Actors)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {

@@ -8,8 +8,12 @@ namespace ShowdeBola.Models {
      
      public class Actor
      {
+          [Required]
          public int Id {get; set;}
          
+         
+         [StringLength(60, MinimumLength = 10)]
+         [Required]
          public string name {get; set;}
          
          
